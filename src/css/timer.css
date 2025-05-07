@@ -1,1 +1,119 @@
+:root {
+    --primary: #4a56e2;
+    --primary-hover: #364fc7;
+    --primary-active: #2f3ab2;
 
+    --border-default: #d7dbdf;
+    --border-hover: #1f1f1f;
+    --border-focus: var(--primary);
+
+    --bg-disabled: #f6f7fb;
+    --text-disabled: #a6aab4;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 40px;
+    background-color: #f9f9fb;
+    color: #000;
+}
+
+.timer-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT STATES */
+
+#datetime-picker {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #555;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 8px;
+     width: 272px;
+    height: 40px;
+}
+
+#datetime-picker:hover:not(:disabled) {
+    border-color: var(--border-hover);
+}
+
+#datetime-picker:focus:not(:disabled) {
+    border-color: var(--border-focus);
+}
+
+#datetime-picker:disabled {
+    background-color: var(--bg-disabled);
+    border-color: var(--border-default);
+    color: var(--text-disabled);
+    cursor: not-allowed;
+}
+
+/* BUTTON STATES */
+
+button[data-start] {
+    margin-left: 12px;
+    width: 50px;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: 400;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button[data-start]:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 8px rgba(74, 86, 226, 0.3);
+}
+
+button[data-start]:active:not(:disabled) {
+    background-color: var(--primary-active);
+    box-shadow: 0 2px 4px rgba(74, 86, 226, 0.4);
+}
+
+button[data-start]:disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+    cursor: not-allowed;
+}
+
+/* TIMER LAYOUT */
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 346px;
+    max-height: 72px;
+}
+
+.field {
+    text-align: center;
+}
+
+.value {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    color: #555;
+}
