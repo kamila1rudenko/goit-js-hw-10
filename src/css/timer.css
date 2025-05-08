@@ -28,6 +28,13 @@ margin-top: 40px;}
 
 /* INPUT STATES */
 
+input.numInput.flatpickr-hour {
+    width: 155px;
+}
+input.numInput.flatpickr-minute {
+    width: 155px;
+}
+
 #datetime-picker {
     flex: 1;
     padding: 10px 14px;
