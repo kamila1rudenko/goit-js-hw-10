@@ -19,9 +19,11 @@ body {
 }
 
 .timer-container {
-    max-width: 500px;
-    margin: auto;
-}
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 40px;}
 
 .controls {
     display: flex;
@@ -35,13 +37,12 @@ body {
     flex: 1;
     padding: 10px 14px;
     font-size: 14px;
-    border: 1px solid #555;
+    border: 1px solid #cec9c9;
     background-color: #fff;
     outline: none;
     transition: border-color 0.2s;
     border-radius: 8px;
      width: 272px;
-    height: 40px;
 }
 
 #datetime-picker:hover:not(:disabled) {
@@ -62,27 +63,43 @@ body {
 /* BUTTON STATES */
 
 button[data-start] {
-    margin-left: 12px;
-    width: 50px;
-    padding: 12px 24px;
-    font-size: 12px;
-    font-weight: 400;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+        padding: 8px 16px;
+        width: 75px;
+        height: 40px;
+    background: #cfcfcf;
     background-color: var(--primary);
-    color: #fff;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
+    font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #989898;
 }
 
 button[data-start]:hover:not(:disabled) {
-    background-color: var(--primary-hover);
+    background: #4e75ff;
     box-shadow: 0 4px 8px rgba(74, 86, 226, 0.3);
+    font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #fff;
 }
 
 button[data-start]:active:not(:disabled) {
-    background-color: var(--primary-active);
+   background: #4e75ff;;
     box-shadow: 0 2px 4px rgba(74, 86, 226, 0.4);
+    font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #fff;
 }
 
 button[data-start]:disabled {
@@ -95,7 +112,7 @@ button[data-start]:disabled {
 
 .timer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 346px;
     max-height: 72px;
 }
@@ -107,12 +124,12 @@ button[data-start]:disabled {
 .value {
     display: block;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .label {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     margin-top: 4px;
     color: #555;
